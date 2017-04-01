@@ -1,20 +1,18 @@
 /**
- * Default theme for reveal.js.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Alley Interactive Theme for reveal.js.
  */
 
-
 // mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
+@import '../template/mixins';
+@import '../template/settings';
 
 @mixin clearfix() {
 	&:before,
 	&:after {
-		content: " ";
+		content: ' ';
 		display: table;
 	}
+
 	&:after {
 		clear: both;
 	}
@@ -25,17 +23,22 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 
-
 // Override theme settings (see .../template/settings.scss)
-$mainColor: #fff;
-$headingColor: #fff;
-$headingTextShadow: none;
-$headingFont: "Open Sans Condensed", "Helvetica Neue", Arial, Helvetica, sans-serif;
 $backgroundColor: #333;
-$linkColor: #fff;
-$linkColorHover: lighten( $linkColor, 20% );
+$mainFontSize: 28px;
+$mainColor: #FFFFFF;
+$headingColor: #FFFFFF;
+$headingFontWeight: 700;
+$headingFont: 'Open Sans Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$linkColor: #FFFFFF;
+$linkColorHover: lighten($linkColor, 20%);
 $selectionBackgroundColor: rgba(79, 64, 28, 0.99);
-$heading1TextShadow: 0 0 0.1em rgba(0,0,0,0.8);
+$heading1TextShadow: 0 0 0.1em rgba(0, 0, 0, 0.8);
+
+$heading1Size: 3.77em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
 
 // Background generator
 @mixin bodyBackground() {
@@ -43,21 +46,19 @@ $heading1TextShadow: 0 0 0.1em rgba(0,0,0,0.8);
 }
 
 // Theme template ------------------------------
-@import "../template/theme";
+@import '../template/theme';
 // ---------------------------------------------
 
 .reveal {
 	.slides a {
 		border-bottom: 3px dashed rgba( 255, 255, 255, 0.33 );
 		padding-bottom: 2px;
-		color: #fff;
+		color: #FFFFFF;
 	}
-	h1 {
-		font-weight: 700;
-		font-size: 3.2em;
-	}
+
+
 	h2 {
-		font-weight: 700;
+
 		img {
 			margin: 0;
 			background: none;
@@ -66,19 +67,31 @@ $heading1TextShadow: 0 0 0.1em rgba(0,0,0,0.8);
 			max-width: 60%;
 		}
 	}
+
 	ol, ul {
 		margin-top: 0.8em;
+
 		li {
 			margin-top: 0.3em;
 		}
 	}
+
 	p {
 		margin-top: 0.8em;
 	}
+
 	.valign {
+
 		&, * {
 			vertical-align: middle;
 		}
+	}
+}
+
+.print-pdf {
+
+	.backgrounds {
+		display: none;
 	}
 }
 
@@ -91,6 +104,7 @@ $heading1TextShadow: 0 0 0.1em rgba(0,0,0,0.8);
 	bottom: 25px;
 	z-index: 1000;
 }
+
 #hashtag {
 	width: 20%;
 	min-width: 200px;
@@ -98,8 +112,9 @@ $heading1TextShadow: 0 0 0.1em rgba(0,0,0,0.8);
 	left: 50px;
 	bottom: 43px;
 	z-index: 1000;
-	color: #fff;
+	color: #FFFFFF;
 }
+
 ul#primary-nav {
 	height: 10.5em;
 	margin: -5.25em 0 0 0;
@@ -110,22 +125,26 @@ ul#primary-nav {
 	left: 0;
 	top: 50%;
 	background: rgba(0,0,0,0.5);
+
 	li {
 		margin: 0;
 		padding: 0;
+
 		a {
 			display: block;
-			color: #fff;
+			color: #FFFFFF;
 			width: 1.5em;
 			height: 1.5em;
 			text-align: center;
-			font: 400 1em/1.5em 'Lato', "Helvetica Neue", Arial, Helvetica, sans-serif;
+			font: 400 1em/1.5em 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
 			&:hover {
 				background: rgba(255,255,255,0.33);
 			}
 		}
+
 		&.current-menu-item a {
-			border-right: 5px solid #fff;
+			border-right: 5px solid #FFFFFF;
 		}
 	}
 }
