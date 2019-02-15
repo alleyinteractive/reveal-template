@@ -320,11 +320,12 @@ body {
   display: none; }
 
 #logo {
-  width: 20%;
-  min-width: 200px;
+  bottom: 25px;
+  max-width: 200px;
+  min-width: 150px;
   position: absolute;
   right: 125px;
-  bottom: 25px;
+  width: 20%;
   z-index: 1000; }
 
 #hashtag {
