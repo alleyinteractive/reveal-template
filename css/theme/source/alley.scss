@@ -20,11 +20,10 @@
 // ---------------------------------------------
 
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 
 // Override theme settings (see .../template/settings.scss)
-$backgroundColor: #333;
+$backgroundColor: #e22e2d; // Set this to #333 for a dark/B&W presentation.
 $mainFontSize: 28px;
 $mainColor: #FFFFFF;
 $headingColor: #FFFFFF;
@@ -41,9 +40,11 @@ $heading3Size: 1.55em;
 $heading4Size: 1.00em;
 
 // Background generator
+/* Uncomment this for a black gradient background.
 @mixin bodyBackground() {
 	@include radial-gradient( rgba(10,10,10,1), rgba(70,70,70,1) );
 }
+*/
 
 // Theme template ------------------------------
 @import '../template/theme';
@@ -114,6 +115,7 @@ $heading4Size: 1.00em;
 	bottom: 43px;
 	z-index: 1000;
 	color: #FFFFFF;
+	text-shadow: 0 0 4px rgb(0 0 0);
 }
 
 ul#primary-nav {

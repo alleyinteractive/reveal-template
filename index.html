@@ -1,129 +1,104 @@
 <!doctype html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<head>
-		<meta charset="utf-8">
+    <title>Alley</title>
 
-		<title>Title goes here</title>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/alley.css">
 
-		<meta name="description" content="">
-		<meta name="author" content="Alley Interactive">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Open+Sans+Condensed:300,700">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="center" data-background="images/background-red.png">
+          <section id="title-slide" class="center">
+            <h2>Presentation Title</h2>
+            <p>Your Name / @twitter / alley.com</p>
+            <p>#hashtag</p>
+          </section>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+          <section class="center">
+            <h2><img src="images/logo.png" alt="Alley" id="title-logo" style="width:30%" /></h2>
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/alley.css" id="theme">
+            <ul>
+              <li>We are a full-service digital agency</li>
+              <li>WordPress.com VIP Gold Partner</li>
+              <li>Hiring!</li>
+            </ul>
+          </section>
+        </section>
 
-		<!-- Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Open+Sans+Condensed:300,700">
+        <section>
+          <h2>Another Slide</h2>
+          <p>This slide has a list with fragments</p>
+          <ol>
+            <li class="fragment">First item</li>
+            <li class="fragment">Second item</li>
+            <li class="fragment">Third item</li>
+          </ol>
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+          <aside class="notes">
+            This slide has some notes
+          </aside>
+        </section>
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement('link');
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
+        <section data-markdown>
+          <script type="text/template">
+            ## Markdown Slide
 
-	<body>
+            This slide is written in markdown. It also has fragments and notes.
 
-		<div class="reveal">
+            * Like this <!-- .element: class="fragment" -->
+            * And this <!-- .element: class="fragment" -->
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+            Note:
+            * tktk
+          </script>
+        </section>
 
-				<section class="center" data-background="images/background.png" data-background-opacity="0.2">
-					<section id="title-slide" class="center">
-						<h2>Presentation Title</h2>
-						<p>Your Name / @twitter / alleyinteractive.com</p>
-					</section>
+        <section>
+          <h2>Slide With Editable Code</h2>
+          <pre><code data-trim contenteditable class="php">
+          function say_hello( $name ) {
+              echo "Hello {$name}!";
+          }
+          </code></pre>
 
-					<section class="center">
-						<h2><img src="images/logo.png" alt="Alley Interactive" id="title-logo" /></h2>
+          <aside class="notes">
+            <ol>
+              <li>You can use HTML in notes too, of course</li>
+              <li>All slides should have notes!</li>
+            </ol>
+          </aside>
+        </section>
+      </div>
 
-						<ul>
-							<li>We are a full-service digital agency</li>
-							<li>WordPress.com VIP partner</li>
-							<li>Hiring!</li>
-						</ul>
-					</section>
-				</section>
+      <img src="images/logo.png" alt="Alley" id="logo" />
+      <div id="hashtag">#hashtag</div>
+    </div>
 
-				<section data-markdown="example.md">
-				</section>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-				<section>
-					<h2>Basic Slide</h2>
-					<p>Slide content</p>
-				</section>
-
-				<section class="center">
-					<h2>Vertically Centered Slide</h2>
-					<p>Slide content</p>
-				</section>
-
-				<section>
-					<h2>Fragments</h2>
-					<ul>
-						<li class="fragment">Any element can get</li>
-						<li class="fragment">the fragment class</li>
-						<li class="fragment">and they show in sequence</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Slide with code</h2>
-					<pre><code data-trim contenteditable class="php">
-echo 'This slide has code';
-// and it's even editable
-					</code></pre>
-				</section>
-
-				<section class="center">
-					<h2>The End</h2>
-
-					<p><br />Want to become a better developer?<br />We're hiring.</p>
-					<p>info@alleyinteractive.com</p>
-				</section>
-
-			</div>
-
-			<img src="images/logo.png" alt="Alley Interactive" id="logo" />
-			<div id="hashtag">#hashtag</div>
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-				center: false,
-				transition: 'convex',
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
 </html>
