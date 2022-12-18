@@ -1,48 +1,104 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Alley</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/alley.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Open+Sans+Condensed:300,700">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="center" data-background="images/background-red.png">
+          <section id="title-slide" class="center">
+            <h2>Presentation Title</h2>
+            <p>Your Name / @twitter / alley.com</p>
+            <p>#hashtag</p>
+          </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+          <section class="center">
+            <h2><img src="images/logo.png" alt="Alley" id="title-logo" style="width:30%" /></h2>
+
+            <ul>
+              <li>We are a full-service digital agency</li>
+              <li>WordPress.com VIP Gold Partner</li>
+              <li>Hiring!</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>Another Slide</h2>
+          <p>This slide has a list with fragments</p>
+          <ol>
+            <li class="fragment">First item</li>
+            <li class="fragment">Second item</li>
+            <li class="fragment">Third item</li>
+          </ol>
+
+          <aside class="notes">
+            This slide has some notes
+          </aside>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Markdown Slide
+
+            This slide is written in markdown. It also has fragments and notes.
+
+            * Like this <!-- .element: class="fragment" -->
+            * And this <!-- .element: class="fragment" -->
+
+            Note:
+            * tktk
+          </script>
+        </section>
+
+        <section>
+          <h2>Slide With Editable Code</h2>
+          <pre><code data-trim contenteditable class="php">
+          function say_hello( $name ) {
+              echo "Hello {$name}!";
+          }
+          </code></pre>
+
+          <aside class="notes">
+            <ol>
+              <li>You can use HTML in notes too, of course</li>
+              <li>All slides should have notes!</li>
+            </ol>
+          </aside>
+        </section>
+      </div>
+
+      <img src="images/logo.png" alt="Alley" id="logo" />
+      <div id="hashtag">#hashtag</div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
 </html>
